@@ -859,10 +859,10 @@ var iphoneXFirstPass = true;
         $(window).resize();
         toolBarOnly = false;
 
-        // if (isMobileMode()) {
-        //     $('#mHideSidebar').show();
-        //     $('#nativeAppControlFrame').show();
-        // }
+        if (isMobileMode()) {
+            $('#mHideSidebar').show();
+            $('#nativeAppControlFrame').show();
+        }
     }
 
     var suspendRefreshViewPort = $axure.player.suspendRefreshViewPort = false;
@@ -1535,8 +1535,8 @@ var iphoneXFirstPass = true;
 
                 // Always append both mobile browser menu and native menu, as app might not have returned value signifying native at this point
                 appendNativePrototypeControlFrame();
-                // appendMobileBrowserControlFrame();
-                // appendProjectOptions();
+                appendMobileBrowserControlFrame();
+                appendProjectOptions();
             }
 
             initializeLogo();
@@ -2026,9 +2026,9 @@ var iphoneXFirstPass = true;
                     }
                 });
             }
-            // $('#mHideSidebar').show();
-            // $('#mobileControlFrameContainer').show();
-            // isShareApp() ? $('#nativeAppControlFrame').show() : $('#mobileBrowserControlFrame').show();
+            $('#mHideSidebar').show();
+            $('#mobileControlFrameContainer').show();
+            isShareApp() ? $('#nativeAppControlFrame').show() : $('#mobileBrowserControlFrame').show();
         } else {
             $minimizeContainer = $('#interfaceControlFrameMinimizeContainer');
             $minimizeContainer.removeClass('collapseHovered');
